@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EMI Calculator</title>
+    <title>EMI Calculator & Loan Eligibility Checker</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -25,6 +25,28 @@
             <button type="submit">Calculate EMI</button>
         </form>
         <div id="result" class="result"></div>
+
+        <h1>Loan Eligibility Checker</h1>
+        <form id="eligibilityForm">
+            <div class="form-group">
+                <label for="monthlyIncome">Monthly Income (₹):</label>
+                <input type="number" id="monthlyIncome" required>
+            </div>
+            <div class="form-group">
+                <label for="monthlyExpenses">Monthly Expenses (₹):</label>
+                <input type="number" id="monthlyExpenses" required>
+            </div>
+            <div class="form-group">
+                <label for="interestRateChecker">Annual Interest Rate (%):</label>
+                <input type="number" id="interestRateChecker" step="0.01" required>
+            </div>
+            <div class="form-group">
+                <label for="tenureYears">Loan Tenure (Years):</label>
+                <input type="number" id="tenureYears" required>
+            </div>
+            <button type="submit">Check Eligibility</button>
+        </form>
+        <div id="eligibilityResult" class="result"></div>
     </div>
     <script src="script.js"></script>
 </body>
