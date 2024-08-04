@@ -26,27 +26,33 @@
         </form>
         <div id="result" class="result"></div>
 
-        <h1>Loan Eligibility Checker</h1>
-        <form id="eligibilityForm">
-            <div class="form-group">
-                <label for="monthlyIncome">Monthly Income (₹):</label>
-                <input type="number" id="monthlyIncome" required>
-            </div>
-            <div class="form-group">
-                <label for="monthlyExpenses">Monthly Expenses (₹):</label>
-                <input type="number" id="monthlyExpenses" required>
-            </div>
-            <div class="form-group">
-                <label for="interestRateChecker">Annual Interest Rate (%):</label>
-                <input type="number" id="interestRateChecker" step="0.01" required>
-            </div>
-            <div class="form-group">
-                <label for="tenureYears">Loan Tenure (Years):</label>
-                <input type="number" id="tenureYears" required>
-            </div>
-            <button type="submit">Check Eligibility</button>
-        </form>
-        <div id="eligibilityResult" class="result"></div>
+        <!-- Toggle Button for Loan Eligibility Checker -->
+        <button id="toggleEligibilityChecker">Toggle Loan Eligibility Checker</button>
+
+        <!-- Loan Eligibility Checker Section -->
+        <div id="eligibilityChecker" class="optional-section" style="display: none;">
+            <h1>Loan Eligibility Checker</h1>
+            <form id="eligibilityForm">
+                <div class="form-group">
+                    <label for="monthlyIncome">Monthly Income (₹):</label>
+                    <input type="number" id="monthlyIncome" required>
+                </div>
+                <div class="form-group">
+                    <label for="monthlyExpenses">Monthly Expenses (₹):</label>
+                    <input type="number" id="monthlyExpenses" required>
+                </div>
+                <div class="form-group">
+                    <label for="interestRateChecker">Annual Interest Rate (%):</label>
+                    <input type="number" id="interestRateChecker" step="0.01" required>
+                </div>
+                <div class="form-group">
+                    <label for="tenureYears">Loan Tenure (Years):</label>
+                    <input type="number" id="tenureYears" required>
+                </div>
+                <button type="submit">Check Eligibility</button>
+            </form>
+            <div id="eligibilityResult" class="result"></div>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>

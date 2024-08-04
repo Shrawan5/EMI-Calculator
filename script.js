@@ -38,3 +38,13 @@ document.getElementById('eligibilityForm').addEventListener('submit', function(e
     const eligibilityResultElement = document.getElementById('eligibilityResult');
     eligibilityResultElement.innerHTML = `You are eligible for a loan up to: ₹${maxLoanAmount.toFixed(2)}`;
 });
+
+// Toggle Visibility of Loan Eligibility Checker
+document.getElementById('toggleEligibilityChecker').addEventListener('click', function() {
+    const eligibilityChecker = document.getElementById('eligibilityChecker');
+    if (eligibilityChecker.style.display === 'none' || eligibilityChecker.style.display === '') {
+        eligibilityChecker.style.display = 'block';
+    } else {
+        eligibilityChecker.style.display = 'none';
+    }
+});
